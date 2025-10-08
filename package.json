@@ -17,6 +17,7 @@
     "echarts": "^6.0.0"
   },
   "peerDependencies": {
+    "@admiral-ds/react-ui": "^8.55.0",
     "@admiral-ds/fonts": "^2.0.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",

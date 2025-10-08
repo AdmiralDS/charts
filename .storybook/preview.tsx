@@ -1,8 +1,17 @@
 import type { Preview } from "@storybook/react-vite";
 import type { ReactRenderer } from "@storybook/react";
 import type { DecoratorFunction } from "storybook/internal/types";
-import { ThemeProvider } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { DARK_THEME, LIGHT_THEME } from "@admiral-ds/react-ui";
+
+const GlobalStyles = createGlobalStyle`
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    html {
+      background-color: var(--admiral-color-Neutral_Neutral00, ${(p) => p.theme.color['Neutral/Neutral 00']});
+    }
+`;
 
 const withThemeProvider: DecoratorFunction<ReactRenderer> = (
   Story,
@@ -12,6 +21,7 @@ const withThemeProvider: DecoratorFunction<ReactRenderer> = (
 
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <Story />
     </ThemeProvider>
   );
@@ -19,13 +29,6 @@ const withThemeProvider: DecoratorFunction<ReactRenderer> = (
 
 const preview: Preview = {
   parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
-    },
-
     a11y: {
       // 'todo' - show a11y violations in the test UI only
       // 'error' - fail CI on a11y violations

@@ -2,7 +2,7 @@ import type { Preview } from "@storybook/react-vite";
 import type { ReactRenderer } from "@storybook/react";
 import type { DecoratorFunction } from "storybook/internal/types";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { DARK_THEME, LIGHT_THEME } from "@admiral-ds/react-ui";
+import { DARK_THEME, FontsVTBGroup, LIGHT_THEME } from "@admiral-ds/react-ui";
 
 const GlobalStyles = createGlobalStyle`
     body {
@@ -22,6 +22,7 @@ const withThemeProvider: DecoratorFunction<ReactRenderer> = (
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
+      <FontsVTBGroup />
       <Story />
     </ThemeProvider>
   );

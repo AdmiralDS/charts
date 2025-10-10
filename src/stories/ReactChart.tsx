@@ -1,39 +1,24 @@
-import { useEffect, useRef, type HTMLAttributes } from "react";
-import { init, type EChartsOption } from "echarts";
+import { useRef } from "react";
+import ReactEcharts, { type EChartsReactProps } from "echarts-for-react";
+import type EChartsReact from "echarts-for-react";
 
-export interface ChartProps extends HTMLAttributes<HTMLDivElement> {
-  option: EChartsOption;
-  size: {width: number, height: number};
-}
-
-export const BarChart = ({ option, size }: ChartProps) => {
-  const chartRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    if (!chartRef.current) return;
-
-    const chart = init(chartRef.current, null, { renderer: "svg" });
-
-    chart.setOption(option);
-
-    const handleResize = () => chart.resize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      chart.dispose();
-    };
-  }, [option]);
+export const ReactChart = ({
+  option,
+  notMerge = false,
+  onChartReady = () => {},
+  onEvents,
+  ...props
+}: EChartsReactProps) => {
+  const chartRef = useRef<EChartsReact | null>(null);
 
   return (
-    <div
+    <ReactEcharts
+      {...props}
       ref={chartRef}
-      style={size}
-      role="img"
-      aria-label="Simple bar chart"
+      option={option} // Обязательно. Объект с параметрами конфигурации (тип EChartsOption)
+      notMerge={notMerge} // Опционально. Флаг обновления данных (объединение данных с предыдущим option)
+      onChartReady={onChartReady} // Опционально. Функция обратного вызова, когда диаграмма готова
+      onEvents={onEvents} // Опционально. Список событий, на которые идет подписка
     />
   );
 };
-// function useState<T>(optionDefault: EChartsOption): [any, any] {
-//   throw new Error("Function not implemented.");
-// }

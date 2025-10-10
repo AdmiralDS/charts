@@ -1,7 +1,7 @@
 import { LIGHT_THEME } from "@admiral-ds/react-ui";
 import type { EChartsOption } from "echarts";
 import { useTheme } from "styled-components";
-import { BarChart } from "../ReactChart";
+import { ReactChart } from "../ReactChart";
 
 export const BasicBarTemplate = () => {
   const theme = useTheme() || LIGHT_THEME;
@@ -11,6 +11,7 @@ export const BasicBarTemplate = () => {
     fontWeight: 300,
     fontSize: 12,
     lineHeight: 15,
+    color: theme.color["Neutral/Neutral 90"],
   } as const;
 
   const option: EChartsOption = {
@@ -46,5 +47,11 @@ export const BasicBarTemplate = () => {
     ],
   };
 
-  return <BarChart option={option} size={{ width: 1023, height: 741 }} />;
+  return (
+    <ReactChart
+      option={option}
+      style={{ width: 1023, height: 741 }}
+      opts={{ renderer: "svg" }} // Опционально. Дополнительные конфигурации диаграмм (renderer, devicePixelRatio)
+    />
+  );
 };

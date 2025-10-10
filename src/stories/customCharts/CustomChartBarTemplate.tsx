@@ -1,9 +1,9 @@
 import { LIGHT_THEME } from "@admiral-ds/react-ui";
 import type { EChartsOption } from "echarts";
 import { useTheme } from "styled-components";
-import { ReactChart } from "../ReactChart";
+import { CustomChart } from "./CustomChart";
 
-export const BarWithBackgroundTemplate = () => {
+export const CustomChartTemplate = () => {
   const theme = useTheme() || LIGHT_THEME;
 
   const axisLabelStyle = {
@@ -42,19 +42,10 @@ export const BarWithBackgroundTemplate = () => {
         itemStyle: {
           color: theme.color["Primary/Primary 50"],
         },
-        showBackground: true,
-        backgroundStyle: {
-          color: theme.color["Opacity/Neutral 4"],
-        },
+        showBackground: false,
       },
     ],
   };
 
-  return (
-    <ReactChart
-      option={option}
-      style={{ width: 1023, height: 741 }}
-      opts={{ renderer: "svg" }} // Опционально. Дополнительные конфигурации диаграмм (renderer, devicePixelRatio)
-    />
-  );
+  return <CustomChart option={option} size={{ width: 1023, height: 741 }} />;
 };

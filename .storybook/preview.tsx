@@ -8,7 +8,14 @@ const GlobalStyles = createGlobalStyle`
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
-    html {
+
+    /* Base preview iframe background */
+    html, body, #storybook-root {
+      background-color: var(--admiral-color-Neutral_Neutral00, ${(p) => p.theme.color['Neutral/Neutral 00']});
+    }
+
+    /* Docs mode containers (Storybook 1/8 classes) */
+    .docs-story {
       background-color: var(--admiral-color-Neutral_Neutral00, ${(p) => p.theme.color['Neutral/Neutral 00']});
     }
 `;

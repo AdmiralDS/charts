@@ -2,13 +2,20 @@ import type { Preview } from "@storybook/react-vite";
 import type { ReactRenderer } from "@storybook/react";
 import type { DecoratorFunction } from "storybook/internal/types";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { DARK_THEME, LIGHT_THEME } from "@admiral-ds/react-ui";
+import { DARK_THEME, FontsVTBGroup, LIGHT_THEME } from "@admiral-ds/react-ui";
 
 const GlobalStyles = createGlobalStyle`
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
-    html {
+
+    /* Base preview iframe background */
+    html, body, #storybook-root {
+      background-color: var(--admiral-color-Neutral_Neutral00, ${(p) => p.theme.color['Neutral/Neutral 00']});
+    }
+
+    /* Docs mode containers (Storybook 1/8 classes) */
+    .docs-story {
       background-color: var(--admiral-color-Neutral_Neutral00, ${(p) => p.theme.color['Neutral/Neutral 00']});
     }
 `;
@@ -22,6 +29,7 @@ const withThemeProvider: DecoratorFunction<ReactRenderer> = (
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
+      <FontsVTBGroup />
       <Story />
     </ThemeProvider>
   );

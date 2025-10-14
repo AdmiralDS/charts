@@ -2,15 +2,14 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { fn } from "storybook/test";
 
-import { ChartButton } from "./ChartButton";
-import { WithIconTemplate } from "./WithIconTemplate";
-import { OutlineTemplate } from "./OutlineTemplate";
-import { LoadingTemplate } from "./LoadingTemplate";
+import { CustomChart } from "./CustomChart";
+import { CustomChartTemplate } from "./CustomChartBarTemplate";
+import { CustomChartWithBackgroundTemplate } from "./CustomChartWithBackgroundTemplate";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Example/Button",
-  component: ChartButton,
+  title: "Example/CustomChart",
+  component: CustomChart,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: "centered",
@@ -21,22 +20,17 @@ const meta = {
   argTypes: {},
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: { onClick: fn() },
-} satisfies Meta<typeof ChartButton>;
+} satisfies Meta<typeof CustomChart>;
 
 export default meta;
-type Story = StoryObj<typeof ChartButton>;
+type Story = StoryObj<typeof CustomChart>;
 
-export const WithIcon: Story = {
-  render: WithIconTemplate,
-  args: { label: "Send" },
+export const BasicBar: Story = {
+  render: CustomChartTemplate,
+  args: {},
 };
 
-export const Outline: Story = {
-  render: OutlineTemplate,
-  args: { label: "Outline" },
-};
-
-export const Loading: Story = {
-  render: LoadingTemplate,
-  args: { label: "Loading..." },
+export const BarWithBackground: Story = {
+  render: CustomChartWithBackgroundTemplate,
+  args: {},
 };

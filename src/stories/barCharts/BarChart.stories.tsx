@@ -5,6 +5,7 @@ import { fn } from "storybook/test";
 import { ReactChart } from "../ReactChart";
 import { BasicBarTemplate } from "./BasicBarTemplate";
 import { BarWithBackgroundTemplate } from "./BarWithBackgroundTemplate";
+import { SeriesLayoutByColumnOrRowTemplate } from "./SeriesLayoutByColumnOrRowTemplate";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -32,5 +33,10 @@ export const BasicBar: Story = {
 
 export const BarWithBackground: Story = {
   render: BarWithBackgroundTemplate,
+  args: {},
+};
+
+export const SeriesLayoutByColumnOrRow: Story = {
+  render: SeriesLayoutByColumnOrRowTemplate,
   args: {},
 };

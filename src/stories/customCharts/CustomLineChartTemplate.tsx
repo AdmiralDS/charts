@@ -1,9 +1,9 @@
 import { LIGHT_THEME } from '@admiral-ds/react-ui';
 import type { EChartsOption } from 'echarts';
 import { useTheme } from 'styled-components';
-import { CustomChart } from './CustomChart';
+import { CustomLineChart } from './CustomLineChart';
 
-export const CustomChartTemplate = () => {
+export const CustomLineTemplate = () => {
   const theme = useTheme() || LIGHT_THEME;
 
   const axisLabelStyle = {
@@ -15,6 +15,14 @@ export const CustomChartTemplate = () => {
   } as const;
 
   const option: EChartsOption = {
+    tooltip: {
+      trigger: 'axis',
+      backgroundColor: theme.color['Neutral/Neutral 10'],
+      borderColor: theme.color['Neutral/Neutral 30'],
+      textStyle: {
+        color: theme.color['Neutral/Neutral 90']
+      }
+    },
     xAxis: {
       type: 'category',
       data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -37,15 +45,14 @@ export const CustomChartTemplate = () => {
     },
     series: [
       {
-        type: 'bar',
-        data: [120, 200, 150, 80, 70, 110, 130],
+        type: 'line',
+        data: [150, 230, 224, 218, 135, 147, 260],
         itemStyle: {
           color: theme.color['Primary/Primary 50']
-        },
-        showBackground: false
+        }
       }
     ]
   };
 
-  return <CustomChart option={option} size={{ width: 1023, height: 741 }} />;
+  return <CustomLineChart option={option} size={{ width: 1023, height: 741 }} />;
 };

@@ -4,6 +4,10 @@ import { fn } from 'storybook/test';
 
 import { ReactChart } from '../ReactChart';
 import { BasicLineTemplate } from './BasicLineTemplate';
+import { StackedLineTemplate } from './StackedLineTemplate';
+import { GradientStackedAreaTemplate } from './GradientStackedAreaTemplate';
+import { StackedAreaTemplate } from './StackedAreaTemplate';
+import { StepLineTemplate } from './StepLineTemplate';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -26,5 +30,25 @@ type Story = StoryObj<typeof ReactChart>;
 
 export const BasicLine: Story = {
   render: BasicLineTemplate,
+  args: {}
+};
+
+export const StackedLine: Story = {
+  render: StackedLineTemplate,
+  args: {}
+};
+
+export const StackedArea: Story = {
+  render: StackedAreaTemplate,
+  args: {}
+};
+
+export const GradientStackedArea: Story = {
+  render: GradientStackedAreaTemplate,
+  args: {}
+};
+
+export const StepLine: Story = {
+  render: StepLineTemplate,
   args: {}
 };

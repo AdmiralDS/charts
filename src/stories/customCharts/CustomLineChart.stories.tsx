@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { fn } from 'storybook/test';
-import { CustomLineChart } from './CustomLineChart';
+import { CustomChart } from './CustomChart';
 import { CustomLineTemplate } from './CustomLineChartTemplate';
 import { CustomStackedLineTemplate } from './CustomStackedLineTemplate';
 import { CustomStackedAreaTemplate } from './CustomStackedAreaTemplate';
@@ -9,7 +9,7 @@ import { CustomDelayGradientStackedAreaTemplate } from './CustomDelayGradientSta
 
 const meta = {
   title: 'Example/CustomChart',
-  component: CustomLineChart,
+  component: CustomChart,
   parameters: {
     layout: 'centered'
   },
@@ -28,10 +28,10 @@ const meta = {
     onEvents: { click: fn() },
     size: { width: 1023, height: 741 }
   }
-} satisfies Meta<typeof CustomLineChart>;
+} satisfies Meta<typeof CustomChart>;
 
 export default meta;
-type Story = StoryObj<typeof CustomLineChart>;
+type Story = StoryObj<typeof CustomChart>;
 
 export const BasicLine: Story = {
   render: CustomLineTemplate,

@@ -47,5 +47,5 @@ export const CustomChartTemplate = () => {
     ]
   };
 
-  return <CustomChart option={option} size={{ width: 1023, height: 741 }} />;
+  return <CustomChart option={option} size={{ width: 1023, height: 741 }} ariaLabel='Custom bar chart' />;
 };

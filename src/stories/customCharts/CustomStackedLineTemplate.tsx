@@ -1,7 +1,7 @@
 import { LIGHT_THEME } from '@admiral-ds/react-ui';
 import type { EChartsOption } from 'echarts';
 import { useTheme } from 'styled-components';
-import { CustomLineChart } from './CustomLineChart';
+import { CustomChart } from './CustomChart';
 
 export const CustomStackedLineTemplate = () => {
   const theme = useTheme() || LIGHT_THEME;
@@ -95,5 +95,5 @@ export const CustomStackedLineTemplate = () => {
     ]
   };
 
-  return <CustomLineChart option={option} size={{ width: 1023, height: 741 }} />;
+  return <CustomChart option={option} size={{ width: 1023, height: 741 }} ariaLabel='Custom stacked line chart' />;
 };

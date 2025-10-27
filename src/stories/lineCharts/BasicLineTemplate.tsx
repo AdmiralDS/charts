@@ -3,7 +3,7 @@ import type { EChartsOption } from 'echarts';
 import { useTheme } from 'styled-components';
 import { ReactChart } from '../ReactChart';
 
-export const BasicBarTemplate = () => {
+export const BasicLineTemplate = () => {
   const theme = useTheme() || LIGHT_THEME;
 
   const axisLabelStyle = {
@@ -37,12 +37,11 @@ export const BasicBarTemplate = () => {
     },
     series: [
       {
-        type: 'bar',
-        data: [120, 200, 150, 80, 70, 110, 130],
+        type: 'line',
+        data: [150, 230, 224, 218, 135, 147, 260],
         itemStyle: {
           color: theme.color['Primary/Primary 50']
-        },
-        showBackground: false
+        }
       }
     ]
   };

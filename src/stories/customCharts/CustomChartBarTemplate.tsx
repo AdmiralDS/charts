@@ -7,14 +7,28 @@ export const CustomChartTemplate = () => {
   const theme = useTheme() || LIGHT_THEME;
 
   const axisLabelStyle = {
-    fontFamily: theme.fontFamily,
     fontWeight: 300,
     fontSize: 12,
     lineHeight: 15,
-    color: theme.color['Neutral/Neutral 90']
   } as const;
 
   const option: EChartsOption = {
+    textStyle: {
+      fontFamily: theme.fontFamily,
+      color: theme.color['Neutral/Neutral 90']
+    },
+    tooltip: {
+      textStyle: {
+        color: theme.color['Neutral/Neutral 90']
+      }
+    },
+    legend: {
+      textStyle: {
+        fontFamily: theme.fontFamily,
+        color: theme.color['Neutral/Neutral 70']
+      },
+      inactiveColor: theme.color['Neutral/Neutral 40']
+    },
     xAxis: {
       type: 'category',
       data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],

@@ -7,21 +7,27 @@ export const SeriesLayoutByColumnOrRowTemplate = () => {
   const theme = useTheme() || LIGHT_THEME;
 
   const axisLabelStyle = {
-    fontFamily: theme.fontFamily,
     fontWeight: 300,
     fontSize: 12,
     lineHeight: 15,
-    color: theme.color['Neutral/Neutral 90']
   } as const;
 
   const option: EChartsOption = {
+    textStyle: {
+      fontFamily: theme.fontFamily,
+      color: theme.color['Neutral/Neutral 90']
+    },
     legend: {
       textStyle: {
         color: theme.color['Neutral/Neutral 70']
       },
       inactiveColor: theme.color['Neutral/Neutral 40']
     },
-    tooltip: {},
+    tooltip: {
+      textStyle: {
+        color: theme.color['Neutral/Neutral 90']
+      }
+    },
     dataset: {
       source: [
         ['product', '2012', '2013', '2014', '2015'],

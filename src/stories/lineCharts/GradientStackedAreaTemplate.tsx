@@ -7,14 +7,16 @@ export const GradientStackedAreaTemplate = () => {
   const theme = useTheme() || LIGHT_THEME;
 
   const axisLabelStyle = {
-    fontFamily: theme.fontFamily,
     fontWeight: 300,
     fontSize: 12,
     lineHeight: 15,
-    color: theme.color['Neutral/Neutral 90']
   } as const;
 
   const option: EChartsOption = {
+    textStyle: {
+      fontFamily: theme.fontFamily,
+      color: theme.color['Neutral/Neutral 90']
+    },
     tooltip: {
       trigger: 'axis',
       backgroundColor: theme.color['Neutral/Neutral 10'],

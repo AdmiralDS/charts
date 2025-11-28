@@ -7,14 +7,16 @@ export const CustomDelayGradientStackedAreaTemplate = () => {
   const theme = useTheme() || LIGHT_THEME;
 
   const axisLabelStyle = {
-    fontFamily: theme.fontFamily,
     fontWeight: 300,
     fontSize: 12,
     lineHeight: 15,
-    color: theme.color['Neutral/Neutral 90']
   } as const;
 
   const option: EChartsOption = {
+    textStyle: {
+      fontFamily: theme.fontFamily,
+      color: theme.color['Neutral/Neutral 90']
+    },
     backgroundColor: theme.color['Neutral/Neutral 05'],
     tooltip: {
       trigger: 'axis',

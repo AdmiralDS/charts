@@ -11,7 +11,7 @@ import { StepLineTemplate } from './StepLineTemplate';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: 'Example/LineChart',
+  title: 'Example/ReactChart/LineChart',
   component: ReactChart,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout

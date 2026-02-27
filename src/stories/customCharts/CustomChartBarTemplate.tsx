@@ -15,19 +15,19 @@ export const CustomChartTemplate = () => {
   const option: EChartsOption = {
     textStyle: {
       fontFamily: theme.fontFamily,
-      color: theme.color['Neutral/Neutral 90']
+      color: theme.color['Neutral/Neutral 90'],
     },
     tooltip: {
       textStyle: {
-        color: theme.color['Neutral/Neutral 90']
-      }
+        color: theme.color['Neutral/Neutral 90'],
+      },
     },
     legend: {
       textStyle: {
         fontFamily: theme.fontFamily,
-        color: theme.color['Neutral/Neutral 70']
+        color: theme.color['Neutral/Neutral 70'],
       },
-      inactiveColor: theme.color['Neutral/Neutral 40']
+      inactiveColor: theme.color['Neutral/Neutral 40'],
     },
     xAxis: {
       type: 'category',
@@ -35,9 +35,9 @@ export const CustomChartTemplate = () => {
       axisLabel: axisLabelStyle,
       axisLine: {
         lineStyle: {
-          color: theme.color['Neutral/Neutral 70']
-        }
-      }
+          color: theme.color['Neutral/Neutral 70'],
+        },
+      },
     },
     yAxis: {
       type: 'value',
@@ -45,21 +45,21 @@ export const CustomChartTemplate = () => {
       splitLine: {
         show: true,
         lineStyle: {
-          color: theme.color['Neutral/Neutral 20']
-        }
-      }
+          color: theme.color['Neutral/Neutral 20'],
+        },
+      },
     },
     series: [
       {
         type: 'bar',
         data: [120, 200, 150, 80, 70, 110, 130],
         itemStyle: {
-          color: theme.color['Primary/Primary 50']
+          color: theme.color['Primary/Primary 50'],
         },
-        showBackground: false
-      }
-    ]
+        showBackground: false,
+      },
+    ],
   };
 
-  return <CustomChart option={option} size={{ width: 1023, height: 741 }} ariaLabel='Custom bar chart' />;
+  return <CustomChart option={option} size={{ width: 1023, height: 741 }} ariaLabel="Custom bar chart" />;
 };

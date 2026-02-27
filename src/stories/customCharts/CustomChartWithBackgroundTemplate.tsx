@@ -11,7 +11,7 @@ export const CustomChartWithBackgroundTemplate = () => {
     fontWeight: 300,
     fontSize: 12,
     lineHeight: 15,
-    color: theme.color['Neutral/Neutral 90']
+    color: theme.color['Neutral/Neutral 90'],
   } as const;
 
   const option: EChartsOption = {
@@ -21,9 +21,9 @@ export const CustomChartWithBackgroundTemplate = () => {
       axisLabel: axisLabelStyle,
       axisLine: {
         lineStyle: {
-          color: theme.color['Neutral/Neutral 70']
-        }
-      }
+          color: theme.color['Neutral/Neutral 70'],
+        },
+      },
     },
     yAxis: {
       type: 'value',
@@ -31,26 +31,26 @@ export const CustomChartWithBackgroundTemplate = () => {
       splitLine: {
         show: true,
         lineStyle: {
-          color: theme.color['Neutral/Neutral 20']
-        }
-      }
+          color: theme.color['Neutral/Neutral 20'],
+        },
+      },
     },
     series: [
       {
         type: 'bar',
         data: [120, 200, 150, 80, 70, 110, 130],
         itemStyle: {
-          color: theme.color['Primary/Primary 50']
+          color: theme.color['Primary/Primary 50'],
         },
         showBackground: true,
         backgroundStyle: {
-          color: theme.color['Opacity/Neutral 4']
-        }
-      }
-    ]
+          color: theme.color['Opacity/Neutral 4'],
+        },
+      },
+    ],
   };
 
   return (
-    <CustomChart option={option} size={{ width: 1023, height: 741 }} ariaLabel='Custom bar chart with background' />
+    <CustomChart option={option} size={{ width: 1023, height: 741 }} ariaLabel="Custom bar chart with background" />
   );
 };

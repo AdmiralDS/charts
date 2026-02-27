@@ -15,24 +15,24 @@ export const CustomGradientStackedAreaTemplate = () => {
   const option: EChartsOption = {
     textStyle: {
       fontFamily: theme.fontFamily,
-      color: theme.color['Neutral/Neutral 90']
+      color: theme.color['Neutral/Neutral 90'],
     },
     tooltip: {
       trigger: 'axis',
       backgroundColor: theme.color['Neutral/Neutral 10'],
       borderColor: theme.color['Neutral/Neutral 30'],
       textStyle: {
-        color: theme.color['Neutral/Neutral 90']
-      }
+        color: theme.color['Neutral/Neutral 90'],
+      },
     },
     legend: {
       data: ['Продажи', 'Прибыль'],
       top: 30,
       textStyle: {
         fontFamily: theme.fontFamily,
-        color: theme.color['Neutral/Neutral 70']
+        color: theme.color['Neutral/Neutral 70'],
       },
-      inactiveColor: theme.color['Neutral/Neutral 40']
+      inactiveColor: theme.color['Neutral/Neutral 40'],
     },
     xAxis: {
       type: 'category',
@@ -41,9 +41,9 @@ export const CustomGradientStackedAreaTemplate = () => {
       axisLabel: axisLabelStyle,
       axisLine: {
         lineStyle: {
-          color: theme.color['Neutral/Neutral 70']
-        }
-      }
+          color: theme.color['Neutral/Neutral 70'],
+        },
+      },
     },
     yAxis: {
       type: 'value',
@@ -51,9 +51,9 @@ export const CustomGradientStackedAreaTemplate = () => {
       splitLine: {
         show: true,
         lineStyle: {
-          color: theme.color['Neutral/Neutral 20']
-        }
-      }
+          color: theme.color['Neutral/Neutral 20'],
+        },
+      },
     },
     series: [
       {
@@ -63,10 +63,10 @@ export const CustomGradientStackedAreaTemplate = () => {
         smooth: true,
         lineStyle: {
           width: 3,
-          color: theme.color['Primary/Primary 50']
+          color: theme.color['Primary/Primary 50'],
         },
         itemStyle: {
-          color: theme.color['Primary/Primary 50']
+          color: theme.color['Primary/Primary 50'],
         },
         areaStyle: {
           color: {
@@ -78,15 +78,15 @@ export const CustomGradientStackedAreaTemplate = () => {
             colorStops: [
               {
                 offset: 0,
-                color: `${theme.color['Primary/Primary 50']}60`
+                color: `${theme.color['Primary/Primary 50']}60`,
               },
               {
                 offset: 1,
-                color: `${theme.color['Primary/Primary 50']}10`
-              }
-            ]
-          }
-        }
+                color: `${theme.color['Primary/Primary 50']}10`,
+              },
+            ],
+          },
+        },
       },
       {
         name: 'Прибыль',
@@ -95,10 +95,10 @@ export const CustomGradientStackedAreaTemplate = () => {
         smooth: true,
         lineStyle: {
           width: 3,
-          color: theme.color['Teal/Teal 50']
+          color: theme.color['Teal/Teal 50'],
         },
         itemStyle: {
-          color: theme.color['Teal/Teal 50']
+          color: theme.color['Teal/Teal 50'],
         },
         areaStyle: {
           color: {
@@ -110,20 +110,20 @@ export const CustomGradientStackedAreaTemplate = () => {
             colorStops: [
               {
                 offset: 0,
-                color: `${theme.color['Teal/Teal 50']}60`
+                color: `${theme.color['Teal/Teal 50']}60`,
               },
               {
                 offset: 1,
-                color: `${theme.color['Teal/Teal 50']}10`
-              }
-            ]
-          }
-        }
-      }
-    ]
+                color: `${theme.color['Teal/Teal 50']}10`,
+              },
+            ],
+          },
+        },
+      },
+    ],
   };
 
   return (
-    <CustomChart option={option} size={{ width: 1023, height: 741 }} ariaLabel='Custom gradient stacked area chart' />
+    <CustomChart option={option} size={{ width: 1023, height: 741 }} ariaLabel="Custom gradient stacked area chart" />
   );
 };

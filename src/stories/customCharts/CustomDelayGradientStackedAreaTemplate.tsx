@@ -15,7 +15,7 @@ export const CustomDelayGradientStackedAreaTemplate = () => {
   const option: EChartsOption = {
     textStyle: {
       fontFamily: theme.fontFamily,
-      color: theme.color['Neutral/Neutral 90']
+      color: theme.color['Neutral/Neutral 90'],
     },
     backgroundColor: theme.color['Neutral/Neutral 05'],
     tooltip: {
@@ -23,23 +23,23 @@ export const CustomDelayGradientStackedAreaTemplate = () => {
       backgroundColor: theme.color['Neutral/Neutral 10'],
       borderColor: theme.color['Neutral/Neutral 30'],
       textStyle: {
-        color: theme.color['Neutral/Neutral 90']
-      }
+        color: theme.color['Neutral/Neutral 90'],
+      },
     },
     legend: {
       data: ['Температура', 'Влажность'],
       top: 30,
       textStyle: {
         fontFamily: theme.fontFamily,
-        color: theme.color['Neutral/Neutral 70']
+        color: theme.color['Neutral/Neutral 70'],
       },
-      inactiveColor: theme.color['Neutral/Neutral 40']
+      inactiveColor: theme.color['Neutral/Neutral 40'],
     },
     grid: {
       containLabel: true,
       backgroundColor: theme.color['Neutral/Neutral 10'],
       borderColor: theme.color['Neutral/Neutral 20'],
-      borderWidth: 1
+      borderWidth: 1,
     },
     xAxis: {
       type: 'category',
@@ -47,9 +47,9 @@ export const CustomDelayGradientStackedAreaTemplate = () => {
       axisLabel: axisLabelStyle,
       axisLine: {
         lineStyle: {
-          color: theme.color['Neutral/Neutral 70']
-        }
-      }
+          color: theme.color['Neutral/Neutral 70'],
+        },
+      },
     },
     yAxis: [
       {
@@ -60,9 +60,9 @@ export const CustomDelayGradientStackedAreaTemplate = () => {
         splitLine: {
           show: true,
           lineStyle: {
-            color: theme.color['Neutral/Neutral 20']
-          }
-        }
+            color: theme.color['Neutral/Neutral 20'],
+          },
+        },
       },
       {
         type: 'value',
@@ -70,9 +70,9 @@ export const CustomDelayGradientStackedAreaTemplate = () => {
         position: 'right',
         axisLabel: axisLabelStyle,
         splitLine: {
-          show: false
-        }
-      }
+          show: false,
+        },
+      },
     ],
     series: [
       {
@@ -83,12 +83,12 @@ export const CustomDelayGradientStackedAreaTemplate = () => {
         smooth: true,
         lineStyle: {
           width: 4,
-          color: theme.color['Warning/Warning 40']
+          color: theme.color['Warning/Warning 40'],
         },
         itemStyle: {
           color: theme.color['Warning/Warning 40'],
           borderWidth: 2,
-          borderColor: theme.color['Neutral/Neutral 10']
+          borderColor: theme.color['Neutral/Neutral 10'],
         },
         areaStyle: {
           color: {
@@ -100,16 +100,16 @@ export const CustomDelayGradientStackedAreaTemplate = () => {
             colorStops: [
               {
                 offset: 0,
-                color: `${theme.color['Warning/Warning 40']}60`
+                color: `${theme.color['Warning/Warning 40']}60`,
               },
               {
                 offset: 1,
-                color: `${theme.color['Warning/Warning 40']}10`
-              }
-            ]
-          }
+                color: `${theme.color['Warning/Warning 40']}10`,
+              },
+            ],
+          },
         },
-        animationDelay: (idx: number) => idx * 100
+        animationDelay: (idx: number) => idx * 100,
       },
       {
         name: 'Влажность',
@@ -119,26 +119,26 @@ export const CustomDelayGradientStackedAreaTemplate = () => {
         smooth: true,
         lineStyle: {
           width: 4,
-          color: theme.color['Primary/Primary 50']
+          color: theme.color['Primary/Primary 50'],
         },
         itemStyle: {
           color: theme.color['Primary/Primary 50'],
           borderWidth: 2,
-          borderColor: theme.color['Neutral/Neutral 10']
+          borderColor: theme.color['Neutral/Neutral 10'],
         },
-        animationDelay: (idx: number) => idx * 100 + 200
-      }
+        animationDelay: (idx: number) => idx * 100 + 200,
+      },
     ],
     animation: true,
     animationDuration: 2000,
-    animationEasing: 'cubicOut'
+    animationEasing: 'cubicOut',
   };
 
   return (
     <CustomChart
       option={option}
       size={{ width: 1023, height: 741 }}
-      ariaLabel='Custom delay gradient stacked area chart'
+      ariaLabel="Custom delay gradient stacked area chart"
     />
   );
 };

@@ -1,27 +1,27 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
-import { fn } from "storybook/test";
-import { CustomChart } from "./CustomChart";
-import { CustomLineTemplate } from "./CustomLineChartTemplate";
-import { CustomStackedLineTemplate } from "./CustomStackedLineTemplate";
-import { CustomStackedAreaTemplate } from "./CustomStackedAreaTemplate";
-import { CustomGradientStackedAreaTemplate } from "./CustomGradientStackedAreaTemplate";
-import { CustomDelayGradientStackedAreaTemplate } from "./CustomDelayGradientStackedAreaTemplate";
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { fn } from 'storybook/test';
+import { CustomChart } from './CustomChart';
+import { CustomLineTemplate } from './CustomLineChartTemplate';
+import { CustomStackedLineTemplate } from './CustomStackedLineTemplate';
+import { CustomStackedAreaTemplate } from './CustomStackedAreaTemplate';
+import { CustomGradientStackedAreaTemplate } from './CustomGradientStackedAreaTemplate';
+import { CustomDelayGradientStackedAreaTemplate } from './CustomDelayGradientStackedAreaTemplate';
 
 const meta = {
-  title: "Example/Native ECharts/LineChart",
+  title: 'Example/Native ECharts/LineChart',
   component: CustomChart,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     size: {
-      control: "object",
-      description: "Размер диаграммы",
+      control: 'object',
+      description: 'Размер диаграммы',
     },
     onEvents: {
-      control: "object",
-      description: "Обработчики событий",
+      control: 'object',
+      description: 'Обработчики событий',
     },
   },
   args: {

@@ -1,8 +1,8 @@
-import type { Preview } from "@storybook/react-vite";
-import type { ReactRenderer } from "@storybook/react";
-import type { DecoratorFunction } from "storybook/internal/types";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { DARK_THEME, FontsVTBGroup, LIGHT_THEME } from "@admiral-ds/react-ui";
+import type { Preview } from '@storybook/react-vite';
+import type { ReactRenderer } from '@storybook/react';
+import type { DecoratorFunction } from 'storybook/internal/types';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { DARK_THEME, FontsVTBGroup, LIGHT_THEME } from '@admiral-ds/react-ui';
 
 const GlobalStyles = createGlobalStyle`
     body {
@@ -20,11 +20,8 @@ const GlobalStyles = createGlobalStyle`
     }
 `;
 
-const withThemeProvider: DecoratorFunction<ReactRenderer> = (
-  Story,
-  context
-) => {
-  const theme = context.globals.theme === "dark" ? DARK_THEME : LIGHT_THEME;
+const withThemeProvider: DecoratorFunction<ReactRenderer> = (Story, context) => {
+  const theme = context.globals.theme === 'dark' ? DARK_THEME : LIGHT_THEME;
 
   return (
     <ThemeProvider theme={theme}>
@@ -41,19 +38,19 @@ const preview: Preview = {
       // 'todo' - show a11y violations in the test UI only
       // 'error' - fail CI on a11y violations
       // 'off' - skip a11y checks entirely
-      test: "todo",
+      test: 'todo',
     },
   },
   globalTypes: {
     theme: {
-      name: "Theme",
-      description: "Admiral DS global theme",
-      defaultValue: "light",
+      name: 'Theme',
+      description: 'Admiral DS global theme',
+      defaultValue: 'light',
       toolbar: {
-        icon: "paintbrush",
+        icon: 'paintbrush',
         items: [
-          { value: "light", title: "Light" },
-          { value: "dark", title: "Dark" },
+          { value: 'light', title: 'Light' },
+          { value: 'dark', title: 'Dark' },
         ],
         dynamicTitle: true,
       },

@@ -1,7 +1,7 @@
-import { LIGHT_THEME } from "@admiral-ds/react-ui";
-import type { EChartsOption } from "echarts";
-import { useTheme } from "styled-components";
-import { ReactChart } from "../ReactChart";
+import { LIGHT_THEME } from '@admiral-ds/react-ui';
+import type { EChartsOption } from 'echarts';
+import { useTheme } from 'styled-components';
+import { ReactChart } from '../ReactChart';
 
 export const BarWithBackgroundTemplate = () => {
   const theme = useTheme() || LIGHT_THEME;
@@ -15,50 +15,50 @@ export const BarWithBackgroundTemplate = () => {
   const option: EChartsOption = {
     textStyle: {
       fontFamily: theme.fontFamily,
-      color: theme.color["Neutral/Neutral 90"],
+      color: theme.color['Neutral/Neutral 90'],
     },
     tooltip: {
       textStyle: {
-        color: theme.color["Neutral/Neutral 90"],
+        color: theme.color['Neutral/Neutral 90'],
       },
     },
     legend: {
       textStyle: {
         fontFamily: theme.fontFamily,
-        color: theme.color["Neutral/Neutral 70"],
+        color: theme.color['Neutral/Neutral 70'],
       },
-      inactiveColor: theme.color["Neutral/Neutral 40"],
+      inactiveColor: theme.color['Neutral/Neutral 40'],
     },
     xAxis: {
-      type: "category",
-      data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      type: 'category',
+      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
       axisLabel: axisLabelStyle,
       axisLine: {
         lineStyle: {
-          color: theme.color["Neutral/Neutral 70"],
+          color: theme.color['Neutral/Neutral 70'],
         },
       },
     },
     yAxis: {
-      type: "value",
+      type: 'value',
       axisLabel: axisLabelStyle,
       splitLine: {
         show: true,
         lineStyle: {
-          color: theme.color["Neutral/Neutral 20"],
+          color: theme.color['Neutral/Neutral 20'],
         },
       },
     },
     series: [
       {
-        type: "bar",
+        type: 'bar',
         data: [120, 200, 150, 80, 70, 110, 130],
         itemStyle: {
-          color: theme.color["Primary/Primary 50"],
+          color: theme.color['Primary/Primary 50'],
         },
         showBackground: true,
         backgroundStyle: {
-          color: theme.color["Opacity/Neutral 4"],
+          color: theme.color['Opacity/Neutral 4'],
         },
       },
     ],
@@ -68,7 +68,7 @@ export const BarWithBackgroundTemplate = () => {
     <ReactChart
       option={option}
       style={{ width: 1023, height: 741 }}
-      opts={{ renderer: "svg" }} // Опционально. Дополнительные конфигурации диаграмм (renderer, devicePixelRatio)
+      opts={{ renderer: 'svg' }} // Опционально. Дополнительные конфигурации диаграмм (renderer, devicePixelRatio)
     />
   );
 };

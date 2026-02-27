@@ -15,15 +15,15 @@ export const GradientStackedAreaTemplate = () => {
   const option: EChartsOption = {
     textStyle: {
       fontFamily: theme.fontFamily,
-      color: theme.color['Neutral/Neutral 90']
+      color: theme.color['Neutral/Neutral 90'],
     },
     tooltip: {
       trigger: 'axis',
       backgroundColor: theme.color['Neutral/Neutral 10'],
       borderColor: theme.color['Neutral/Neutral 30'],
       textStyle: {
-        color: theme.color['Neutral/Neutral 90']
-      }
+        color: theme.color['Neutral/Neutral 90'],
+      },
     },
     xAxis: {
       type: 'category',
@@ -31,9 +31,9 @@ export const GradientStackedAreaTemplate = () => {
       axisLabel: axisLabelStyle,
       axisLine: {
         lineStyle: {
-          color: theme.color['Neutral/Neutral 70']
-        }
-      }
+          color: theme.color['Neutral/Neutral 70'],
+        },
+      },
     },
     yAxis: {
       type: 'value',
@@ -41,9 +41,9 @@ export const GradientStackedAreaTemplate = () => {
       splitLine: {
         show: true,
         lineStyle: {
-          color: theme.color['Neutral/Neutral 20']
-        }
-      }
+          color: theme.color['Neutral/Neutral 20'],
+        },
+      },
     },
     series: [
       {
@@ -52,12 +52,12 @@ export const GradientStackedAreaTemplate = () => {
         smooth: true,
         lineStyle: {
           width: 4,
-          color: theme.color['Primary/Primary 50']
+          color: theme.color['Primary/Primary 50'],
         },
         itemStyle: {
           color: theme.color['Primary/Primary 50'],
           borderWidth: 2,
-          borderColor: theme.color['Neutral/Neutral 10']
+          borderColor: theme.color['Neutral/Neutral 10'],
         },
         areaStyle: {
           color: {
@@ -69,25 +69,25 @@ export const GradientStackedAreaTemplate = () => {
             colorStops: [
               {
                 offset: 0,
-                color: `${theme.color['Primary/Primary 50']}60`
+                color: `${theme.color['Primary/Primary 50']}60`,
               },
               {
                 offset: 1,
-                color: `${theme.color['Primary/Primary 50']}10`
-              }
-            ]
-          }
+                color: `${theme.color['Primary/Primary 50']}10`,
+              },
+            ],
+          },
         },
         symbol: 'circle',
         symbolSize: 8,
         emphasis: {
           itemStyle: {
             borderWidth: 4,
-            borderColor: theme.color['Primary/Primary 30']
-          }
-        }
-      }
-    ]
+            borderColor: theme.color['Primary/Primary 30'],
+          },
+        },
+      },
+    ],
   };
 
   return <ReactChart option={option} style={{ width: 1023, height: 741 }} opts={{ renderer: 'svg' }} />;

@@ -15,24 +15,24 @@ export const StepLineTemplate = () => {
   const option: EChartsOption = {
     textStyle: {
       fontFamily: theme.fontFamily,
-      color: theme.color['Neutral/Neutral 90']
+      color: theme.color['Neutral/Neutral 90'],
     },
     tooltip: {
       trigger: 'axis',
       backgroundColor: theme.color['Neutral/Neutral 10'],
       borderColor: theme.color['Neutral/Neutral 30'],
       textStyle: {
-        color: theme.color['Neutral/Neutral 90']
-      }
+        color: theme.color['Neutral/Neutral 90'],
+      },
     },
     legend: {
       data: ['Ступенчатая', 'Обычная'],
       top: 30,
       textStyle: {
         fontFamily: theme.fontFamily,
-        color: theme.color['Neutral/Neutral 70']
+        color: theme.color['Neutral/Neutral 70'],
       },
-      inactiveColor: theme.color['Neutral/Neutral 40']
+      inactiveColor: theme.color['Neutral/Neutral 40'],
     },
     xAxis: {
       type: 'category',
@@ -40,9 +40,9 @@ export const StepLineTemplate = () => {
       axisLabel: axisLabelStyle,
       axisLine: {
         lineStyle: {
-          color: theme.color['Neutral/Neutral 70']
-        }
-      }
+          color: theme.color['Neutral/Neutral 70'],
+        },
+      },
     },
     yAxis: {
       type: 'value',
@@ -50,9 +50,9 @@ export const StepLineTemplate = () => {
       splitLine: {
         show: true,
         lineStyle: {
-          color: theme.color['Neutral/Neutral 20']
-        }
-      }
+          color: theme.color['Neutral/Neutral 20'],
+        },
+      },
     },
     series: [
       {
@@ -62,13 +62,13 @@ export const StepLineTemplate = () => {
         data: [0, 1, 2, 1, 3, 2, 4, 3, 5, 4, 6],
         lineStyle: {
           width: 3,
-          color: theme.color['Primary/Primary 50']
+          color: theme.color['Primary/Primary 50'],
         },
         itemStyle: {
-          color: theme.color['Primary/Primary 50']
+          color: theme.color['Primary/Primary 50'],
         },
         symbol: 'rect',
-        symbolSize: 8
+        symbolSize: 8,
       },
       {
         name: 'Обычная',
@@ -76,15 +76,15 @@ export const StepLineTemplate = () => {
         data: [0, 1, 2, 1, 3, 2, 4, 3, 5, 4, 6],
         lineStyle: {
           width: 2,
-          color: theme.color['Teal/Teal 50']
+          color: theme.color['Teal/Teal 50'],
         },
         itemStyle: {
-          color: theme.color['Teal/Teal 50']
+          color: theme.color['Teal/Teal 50'],
         },
         symbol: 'circle',
-        symbolSize: 6
-      }
-    ]
+        symbolSize: 6,
+      },
+    ],
   };
 
   return <ReactChart option={option} style={{ width: 1023, height: 741 }} opts={{ renderer: 'svg' }} />;

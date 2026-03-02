@@ -1,24 +1,24 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
-import { fn } from "storybook/test";
-import { CustomChart } from "./CustomChart";
-import { CustomPieTemplate } from "./CustomPieTemplate";
-import { CustomPieDoughnutTemplate } from "./CustomPieDoughnutTemplate";
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { fn } from 'storybook/test';
+import { CustomChart } from './CustomChart';
+import { CustomPieTemplate } from './CustomPieTemplate';
+import { CustomPieDoughnutTemplate } from './CustomPieDoughnutTemplate';
 
 const meta = {
-  title: "Example/Native ECharts/PieChart",
+  title: 'Example/Native ECharts/PieChart',
   component: CustomChart,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     size: {
-      control: "object",
-      description: "Размер диаграммы",
+      control: 'object',
+      description: 'Размер диаграммы',
     },
     onEvents: {
-      control: "object",
-      description: "Обработчики событий",
+      control: 'object',
+      description: 'Обработчики событий',
     },
   },
   args: {

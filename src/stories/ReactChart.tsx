@@ -1,6 +1,6 @@
-import { useRef } from "react";
-import ReactEcharts, { type EChartsReactProps } from "echarts-for-react";
-import type EChartsReact from "echarts-for-react";
+import { useRef } from 'react';
+import ReactEcharts, { type EChartsReactProps } from 'echarts-for-react';
+import type EChartsReact from 'echarts-for-react';
 
 export const ReactChart = ({
   option,

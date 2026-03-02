@@ -1,7 +1,7 @@
-import { LIGHT_THEME } from "@admiral-ds/react-ui";
-import type { EChartsOption } from "echarts";
-import { useTheme } from "styled-components";
-import { ReactChart } from "../ReactChart";
+import { LIGHT_THEME } from '@admiral-ds/react-ui';
+import type { EChartsOption } from 'echarts';
+import { useTheme } from 'styled-components';
+import { ReactChart } from '../ReactChart';
 
 export const PieDoughnutTemplate = () => {
   const theme = useTheme() || LIGHT_THEME;
@@ -9,52 +9,52 @@ export const PieDoughnutTemplate = () => {
   const option: EChartsOption = {
     textStyle: {
       fontFamily: theme.fontFamily,
-      color: "#252629",
+      color: '#252629',
     },
     tooltip: {
-      trigger: "item",
+      trigger: 'item',
       textStyle: {
-        color: "#74767B",
+        color: '#74767B',
       },
     },
     legend: {
-      top: "5%",
-      left: "center",
+      top: '5%',
+      left: 'center',
       textStyle: {
-        color: "#252629",
+        color: '#252629',
       },
     },
     series: [
       {
-        name: "Access From",
-        type: "pie",
-        radius: ["40%", "70%"],
+        name: 'Access From',
+        type: 'pie',
+        radius: ['40%', '70%'],
         avoidLabelOverlap: false,
         itemStyle: {
           borderRadius: 10,
-          borderColor: "#fff",
+          borderColor: '#fff',
           borderWidth: 2,
         },
         label: {
           show: false,
-          position: "center",
+          position: 'center',
         },
         emphasis: {
           label: {
             show: true,
             fontSize: 40,
-            fontWeight: "bold",
+            fontWeight: 'bold',
           },
         },
         labelLine: {
           show: false,
         },
         data: [
-          { value: 1048, name: "Search Engine" },
-          { value: 735, name: "Direct" },
-          { value: 580, name: "Email" },
-          { value: 484, name: "Union Ads" },
-          { value: 300, name: "Video Ads" },
+          { value: 1048, name: 'Search Engine' },
+          { value: 735, name: 'Direct' },
+          { value: 580, name: 'Email' },
+          { value: 484, name: 'Union Ads' },
+          { value: 300, name: 'Video Ads' },
         ],
       },
     ],
@@ -64,7 +64,7 @@ export const PieDoughnutTemplate = () => {
     <ReactChart
       option={option}
       style={{ width: 1023, height: 741 }}
-      opts={{ renderer: "svg" }} // Опционально. Дополнительные конфигурации диаграмм (renderer, devicePixelRatio)
+      opts={{ renderer: 'svg' }} // Опционально. Дополнительные конфигурации диаграмм (renderer, devicePixelRatio)
     />
   );
 };

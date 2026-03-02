@@ -15,26 +15,26 @@ export const SeriesLayoutByColumnOrRowTemplate = () => {
   const option: EChartsOption = {
     textStyle: {
       fontFamily: theme.fontFamily,
-      color: theme.color['Neutral/Neutral 90']
+      color: theme.color['Neutral/Neutral 90'],
     },
     legend: {
       textStyle: {
-        color: theme.color['Neutral/Neutral 70']
+        color: theme.color['Neutral/Neutral 70'],
       },
-      inactiveColor: theme.color['Neutral/Neutral 40']
+      inactiveColor: theme.color['Neutral/Neutral 40'],
     },
     tooltip: {
       textStyle: {
-        color: theme.color['Neutral/Neutral 90']
-      }
+        color: theme.color['Neutral/Neutral 90'],
+      },
     },
     dataset: {
       source: [
         ['product', '2012', '2013', '2014', '2015'],
         ['Matcha Latte', 41.1, 30.4, 65.1, 53.3],
         ['Milk Tea', 86.5, 92.1, 85.7, 83.1],
-        ['Cheese Cocoa', 24.1, 67.2, 79.5, 86.4]
-      ]
+        ['Cheese Cocoa', 24.1, 67.2, 79.5, 86.4],
+      ],
     },
     xAxis: [
       {
@@ -43,9 +43,9 @@ export const SeriesLayoutByColumnOrRowTemplate = () => {
         axisLabel: axisLabelStyle,
         axisLine: {
           lineStyle: {
-            color: theme.color['Neutral/Neutral 70']
-          }
-        }
+            color: theme.color['Neutral/Neutral 70'],
+          },
+        },
       },
       {
         type: 'category',
@@ -53,10 +53,10 @@ export const SeriesLayoutByColumnOrRowTemplate = () => {
         axisLabel: axisLabelStyle,
         axisLine: {
           lineStyle: {
-            color: theme.color['Neutral/Neutral 70']
-          }
-        }
-      }
+            color: theme.color['Neutral/Neutral 70'],
+          },
+        },
+      },
     ],
     yAxis: [
       {
@@ -65,9 +65,9 @@ export const SeriesLayoutByColumnOrRowTemplate = () => {
         splitLine: {
           show: true,
           lineStyle: {
-            color: theme.color['Neutral/Neutral 20']
-          }
-        }
+            color: theme.color['Neutral/Neutral 20'],
+          },
+        },
       },
       {
         gridIndex: 1,
@@ -75,10 +75,10 @@ export const SeriesLayoutByColumnOrRowTemplate = () => {
         splitLine: {
           show: true,
           lineStyle: {
-            color: theme.color['Neutral/Neutral 20']
-          }
-        }
-      }
+            color: theme.color['Neutral/Neutral 20'],
+          },
+        },
+      },
     ],
     grid: [{ bottom: '55%' }, { top: '55%' }],
     series: [
@@ -87,22 +87,22 @@ export const SeriesLayoutByColumnOrRowTemplate = () => {
         type: 'bar',
         seriesLayoutBy: 'row',
         itemStyle: {
-          color: theme.color['Primary/Primary 50']
-        }
+          color: theme.color['Primary/Primary 50'],
+        },
       },
       {
         type: 'bar',
         seriesLayoutBy: 'row',
         itemStyle: {
-          color: theme.color['Success/Success 50 Main']
-        }
+          color: theme.color['Success/Success 50 Main'],
+        },
       },
       {
         type: 'bar',
         seriesLayoutBy: 'row',
         itemStyle: {
-          color: theme.color['Purple/Purple 60 Main']
-        }
+          color: theme.color['Purple/Purple 60 Main'],
+        },
       },
       // These series are in the second grid.
       {
@@ -110,34 +110,34 @@ export const SeriesLayoutByColumnOrRowTemplate = () => {
         xAxisIndex: 1,
         yAxisIndex: 1,
         itemStyle: {
-          color: theme.color['Warning/Warning 40']
-        }
+          color: theme.color['Warning/Warning 40'],
+        },
       },
       {
         type: 'bar',
         xAxisIndex: 1,
         yAxisIndex: 1,
         itemStyle: {
-          color: theme.color['Cyan/Cyan 50']
-        }
+          color: theme.color['Cyan/Cyan 50'],
+        },
       },
       {
         type: 'bar',
         xAxisIndex: 1,
         yAxisIndex: 1,
         itemStyle: {
-          color: theme.color['Attention/Attention 40']
-        }
+          color: theme.color['Attention/Attention 40'],
+        },
       },
       {
         type: 'bar',
         xAxisIndex: 1,
         yAxisIndex: 1,
         itemStyle: {
-          color: theme.color['Magenta/Magenta 50']
-        }
-      }
-    ]
+          color: theme.color['Magenta/Magenta 50'],
+        },
+      },
+    ],
   };
 
   return (

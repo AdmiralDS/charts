@@ -42,7 +42,7 @@ export const CustomChart = ({ option, size, onEvents, ariaLabel = 'Custom chart'
     chart.resize();
   }, [option, size]);
 
-  return <div {...props} ref={chartRef} style={size} role='img' aria-label={ariaLabel} />;
+  return <div {...props} ref={chartRef} style={size} role="img" aria-label={ariaLabel} />;
 };
 // function useState<T>(optionDefault: EChartsOption): [any, any] {
 //   throw new Error("Function not implemented.");

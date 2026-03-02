@@ -15,19 +15,19 @@ export const BasicLineTemplate = () => {
   const option: EChartsOption = {
     textStyle: {
       fontFamily: theme.fontFamily,
-      color: theme.color['Neutral/Neutral 90']
+      color: theme.color['Neutral/Neutral 90'],
     },
     tooltip: {
       textStyle: {
-        color: theme.color['Neutral/Neutral 90']
-      }
+        color: theme.color['Neutral/Neutral 90'],
+      },
     },
     legend: {
       textStyle: {
         fontFamily: theme.fontFamily,
-        color: theme.color['Neutral/Neutral 70']
+        color: theme.color['Neutral/Neutral 70'],
       },
-      inactiveColor: theme.color['Neutral/Neutral 40']
+      inactiveColor: theme.color['Neutral/Neutral 40'],
     },
     xAxis: {
       type: 'category',
@@ -35,9 +35,9 @@ export const BasicLineTemplate = () => {
       axisLabel: axisLabelStyle,
       axisLine: {
         lineStyle: {
-          color: theme.color['Neutral/Neutral 70']
-        }
-      }
+          color: theme.color['Neutral/Neutral 70'],
+        },
+      },
     },
     yAxis: {
       type: 'value',
@@ -45,19 +45,19 @@ export const BasicLineTemplate = () => {
       splitLine: {
         show: true,
         lineStyle: {
-          color: theme.color['Neutral/Neutral 20']
-        }
-      }
+          color: theme.color['Neutral/Neutral 20'],
+        },
+      },
     },
     series: [
       {
         type: 'line',
         data: [150, 230, 224, 218, 135, 147, 260],
         itemStyle: {
-          color: theme.color['Primary/Primary 50']
-        }
-      }
-    ]
+          color: theme.color['Primary/Primary 50'],
+        },
+      },
+    ],
   };
 
   return (
